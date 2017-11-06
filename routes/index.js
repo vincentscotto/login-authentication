@@ -35,11 +35,11 @@ router.post('/register', (req, res, next) => {
         password = req.body.password,
         passwordconfirmation = req.body.passwordconfirmation;
 
-  req.checkBody('name', 'Name field is required').notEmpty();
-  req.checkBody('username', 'Username field is required').notEmpty();
-  req.checkBody('email', 'Email must be a valid email address').isEmail();
-  req.checkBody('password', 'Password field is required').notEmpty();
-  req.checkBody('passwordconfirmation', 'Passwords do not match').equals(req.body.password);
+  req.checkBody('name', 'Name field is required, brah').notEmpty();
+  req.checkBody('username', 'Username field is required, brah').notEmpty();
+  req.checkBody('email', 'Email must be a valid email address, brah').isEmail();
+  req.checkBody('password', 'Password field is required, brah').notEmpty();
+  req.checkBody('passwordconfirmation', 'Passwords don\'t match, brah').equals(req.body.password);
 
   let errors = req.validationErrors();
 
@@ -57,7 +57,7 @@ router.post('/register', (req, res, next) => {
 
     User.registerUser(newUser, (err, user) => {
       if (err) throw err;
-      req.flash('success_msg', 'You\'re registered and can now login!');
+      req.flash('success_msg', 'You\'re registered and can now login, brah!');
       res.redirect('/login');
     })
   }

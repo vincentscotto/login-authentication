@@ -1,19 +1,25 @@
 <form method="post" action="/register">
   <div>
-    <label>Name</label>
-    <input type="text" name="name" placeholder="Name" required>
-
-    <label>Username</label>
-    <input type="text" name="username" placeholder="Username" required>
-
-    <label>Email</label>
-    <input type="text" name="email" placeholder="Email" required>
-
-    <label>Password</label>
-    <input type="text" name="password" placeholder="Password" required>
-    
-    <label>Confirm Password</label>
-    <input type="text" name="passwordconfirmation" placeholder="Confirm Password" required>
+    <div class="input-group">
+      <input type="text" name="name" required>
+      <label>Name</label>
+    </div>
+    <div class="input-group">
+      <input type="text" name="username" required>
+      <label>Username</label>
+    </div>
+    <div class="input-group">
+      <input type="text" name="email" required>
+      <label>Email</label>
+    </div>
+    <div class="input-group">
+      <input type="password" name="password" required>
+      <label>Password</label>
+    </div>
+    <div class="input-group">
+      <input type="password" name="passwordconfirmation" required>
+      <label>Confirm Password</label>
+    </div>
   </div>
 
     <button type="submit">Register</button>
